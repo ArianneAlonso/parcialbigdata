@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Meta tags SEO -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Melo Yevo - Tienda de ropa de segunda mano. ♻️ Moda circular en Formosa. 📍Eva Perón 1610. Jueves a Sábados de 18 a 22hs. Envíos a todo el país.">
+    <meta name="keywords" content="ropa segunda mano, moda circular, Melo Yevo, tienda ropa Formosa, upcycling, slow fashion, reciclaje textil, Eva Perón 1610">
+    <meta name="author" content="Melo Yevo">
+    
+    <title>Melo Yevo | ♻️ Moda Circular - Ropa de Segunda Mano</title>
+    
+    <!-- Estilos CSS personalizados -->
+    <style>
+        :root {
+            --fucsia: #FF00FF;
+            --amarillo: #FFD700;
+            --naranja: #FFA500;
+            --blanco: #FFFFFF;
+            --negro: #333333;
+            --gris-claro: #f5f5f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--blanco);
+            color: var(--negro);
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--fucsia);
+            color: var(--blanco);
+            padding: 1.5rem 0;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid var(--amarillo);
+        }
+        
+        .logo {
+            font-size: 2.8rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+        
+        .slogan {
+            font-style: italic;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Navegación */
+        nav {
+            background-color: var(--amarillo);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+        
+        nav ul li a {
+            color: var(--negro);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            background-color: var(--fucsia);
+            color: var(--blanco);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--fucsia);
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover::after {
+            width: 80%;
+            left: 10%;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            background-color: var(--fucsia);
+            background-image: url('https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--blanco);
+            padding: 0 2rem;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 0, 255, 0.7);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.6rem;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--amarillo);
+            color: var(--negro);
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--amarillo);
+            color: var(--negro);
+        }
+        
+        .btn:hover {
+            background-color: var(--fucsia);
+            color: var(--blanco);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--amarillo);
+        }
+        
+        /* Secciones */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--fucsia);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--naranja);
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 1rem auto 0;
+            font-size: 1.1rem;
+            color: var(--negro);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .mt-4 {
+            margin-top: 2rem;
+        }
+        
+        /* Productos */
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .producto {
+            background-color: var(--blanco);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .producto:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .producto-img {
+            height: 280px;
+            overflow: hidden;
+        }
+        
+        .producto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .producto:hover img {
+            transform: scale(1.05);
+        }
+        
+        .producto-info {
+            padding: 1.8rem;
+            text-align: center;
+        }
+        
+        .producto-info h3 {
+            margin-bottom: 0.8rem;
+            color: var(--naranja);
+            font-size: 1.4rem;
+        }
+        
+        .producto-info p {
+            color: var(--negro);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .producto-info .precio {
+            font-weight: bold;
+            color: var(--fucsia);
+            font-size: 1.3rem;
+            margin: 1.2rem 0;
+            display: block;
+        }
+        
+        .producto-info .btn {
+            padding: 0.7rem 1.8rem;
+            font-size: 1rem;
+            display: inline-block;
+            margin: 0.3rem;
+        }
+        
+        /* Blog */
+        .articulos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .articulo {
+            background-color: var(--blanco);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .articulo-img {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .articulo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .articulo:hover img {
+            transform: scale(1.05);
+        }
+        
+        .articulo-contenido {
+            padding: 1.8rem;
+        }
+        
+        .articulo-contenido .fecha {
+            color: var(--naranja);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+        
+        .articulo-contenido h3 {
+            margin-bottom: 1.2rem;
+            color: var(--fucsia);
+            font-size: 1.4rem;
+        }
+        
+        .articulo-contenido p {
+            margin-bottom: 1.5rem;
+            color: var(--negro);
+        }
+        
+        .articulo-contenido a {
+            color: var(--fucsia);
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .articulo-contenido a:hover {
+            color: var(--naranja);
+        }
+        
+        .articulo-contenido a i {
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .articulo-contenido a:hover i {
+            transform: translateX(3px);
+        }
+        
+        /* Registro */
+        .registro-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--blanco);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: bold;
+            color: var(--fucsia);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--amarillo);
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--fucsia);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 0, 255, 0.1);
+        }
+        
+        .form-btn {
+            text-align: center;
+            margin-top: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--fucsia);
+            color: var(--blanco);
+            padding: 3rem 0 2rem;
+            text-align: center;
+            border-top: 5px solid var(--amarillo);
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .footer-logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-info h3 {
+            color: var(--amarillo);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .footer-info p {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-info i {
+            margin-right: 0.8rem;
+            color: var(--amarillo);
+        }
+        
+        .footer-redes {
+            margin: 2rem 0;
+        }
+        
+        .footer-redes a {
+            color: var(--blanco);
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-redes a:hover {
+            color: var(--amarillo);
+            transform: scale(1.2);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .producto, .articulo, .registro-form {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.3rem;
+            }
+            
+            nav ul li {
+                margin: 0 0.8rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.3rem;
+            }
+            
+            section {
+                padding: 4rem 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 1.8rem;
+            }
+            
+            .slogan {
+                font-size: 1rem;
+            }
+            
+            nav ul li a {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .productos-grid, .articulos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Melo Yevo</div>
+        <div class="slogan"> Moda Circular - Ropa de Segunda Mano</div>
+    </header>
+    
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#registro">Registrarse</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Sección Hero (Inicio) -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Moda Circular con Estilo</h1>
+            <p>En Melo Yevo damos una segunda vida a prendas únicas, reduciendo el impacto ambiental de la industria textil.</p>
+            <a href="#productos" class="btn">Explorar Productos</a>
+        </div>
+    </section>
+    
+    <!-- Sección Productos -->
+    <section id="productos">
+        <div class="section-header">
+            <h2>Nuestras Prendas Seleccionadas</h2>
+            <p>Descubre piezas únicas de segunda mano cuidadosamente seleccionadas</p>
+        </div>
+        
+        <div class="productos-grid">
+            <div class="producto">
+                <div class="producto-img">
+                    <img src="./photo-1551232864-3f0890e580d9.png" alt="Vestido fucsia vintage de segunda mano en Melo Yevo">
+                </div>
+                <div class="producto-info">
+                    <h3>Tapados</h3>
+                    <p>Tapaditos en perfecto estado, talla M.</p>
+                    <span class="precio">$12.000</span>
+                    <a href="#" class="btn">Agregar al carrito</a>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <div class="producto-img">
+                    <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Camisa amarilla clásica de segunda mano en Melo Yevo">
+                </div>
+                <div class="producto-info">
+                    <h3>Camisa Clásica</h3>
+                    <p>Camisa de algodón  con apenas uso, talla L.</p>
+                    <span class="precio">$10.000</span>
+                    <a href="#" class="btn">Agregar al carrito</a>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <div class="producto-img">
+                    <img src="https://images.unsplash.com/photo-1554412933-514a83d2f3c8?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Pantalones naranja retro de segunda mano en Melo Yevo">
+                </div>
+                <div class="producto-info">
+                    <h3>Conjunto Retro</h3>
+                    <p>Conjunto vintage de los 80s en excelente estado, talla única.</p>
+                    <span class="precio">$20.000</span>
+                    <a href="#" class="btn">Agregar al carrito</a>
+                </div>
+            </div>
+            
+            <div class="producto">
+                <div class="producto-img">
+                    <img src="https://images.unsplash.com/photo-1520367445093-50dc08a59d9d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Chaqueta denim recuperada de segunda mano en Melo Yevo">
+                </div>
+                <div class="producto-info">
+                    <h3>Chaqueta Denim</h3>
+                    <p>Chaqueta de mezclilla reconstruida con detalles únicos, talla M.</p>
+                    <span class="precio">$15.000</span>
+                    <a href="#" class="btn">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-4">
+            <a href="#" class="btn btn-outline">Ver más productos</a>
+        </div>
+    </section>
+    
+    <!-- Sección Blog -->
+    <section id="blog">
+        <div class="section-header">
+            <h2>Blog de Moda Circular</h2>
+            <p>Aprende sobre moda sostenible y el impacto positivo de comprar ropa de segunda mano</p>
+        </div>
+        
+        <div class="articulos">
+            <div class="articulo">
+                <div class="articulo-img">
+                    <img src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Guía para comprar ropa de segunda mano de calidad">
+                </div>
+                <div class="articulo-contenido">
+                    <span class="fecha">15 Mayo 2023</span>
+                    <h3>Guía para Comprar Ropa de Segunda Mano</h3>
+                    <p>Aprende cómo identificar prendas de calidad, qué buscar en las etiquetas y cómo darle una segunda vida a prendas únicas.</p>
+                    <a href="#">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="articulo">
+                <div class="articulo-img">
+                    <img src="https://images.unsplash.com/photo-1520006403909-838d6b92c22e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Cómo lavar y cuidar ropa de segunda mano">
+                </div>
+                <div class="articulo-contenido">
+                    <span class="fecha">28 Abril 2023</span>
+                    <h3>Cómo Lavar y Cuidar tu Ropa de Segunda Mano</h3>
+                    <p>Trucos profesionales para desinfectar, lavar y mantener tus prendas de segunda mano como nuevas por más tiempo.</p>
+                    <a href="#">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="articulo">
+                <div class="articulo-img">
+                    <img src="./impacto_textiles_800x450.jpg" alt="Impacto ambiental de comprar ropa usada">
+                </div>
+                <div class="articulo-contenido">
+                    <span class="fecha">10 Abril 2023</span>
+                    <h3>El Impacto Real de Comprar Ropa Usada</h3>
+                    <p>Descubre cómo comprar ropa de segunda mano reduce tu huella ecológica y ayuda al planeta más de lo que imaginas.</p>
+                    <a href="#">Leer más <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sección Registro -->
+    <section id="registro">
+        <div class="section-header">
+            <h2>Únete a la Comunidad Melo Yevo</h2>
+            <p>Regístrate para recibir novedades, descuentos exclusivos y consejos de moda circular</p>
+        </div>
+        
+        <div class="registro-form">
+            <form>
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="+54 9 XXX XXX XXXX">
+                </div>
+                
+                <div class="form-group">
+                    <label for="interes">¿Qué te interesa?</label>
+                    <select id="interes" name="interes">
+                        <option value="mujer">Ropa de mujer</option>
+                        <option value="hombre">Ropa de hombre</option>
+                        <option value="ambos">Ambos</option>
+                        <option value="info">Solo información</option>
+                    </select>
+                </div>
+                
+                <div class="form-btn">
+                    <button type="submit" class="btn">Registrarse</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Melo Yevo</div>
+            
+            <div class="footer-info">
+                <div>
+                    <h3>Horario de atención</h3>
+                    <p><i class="fas fa-calendar-alt"></i> Jueves a Sábados</p>
+                    <p><i class="fas fa-clock"></i> 18:00 - 22:00 hs</p>
+                </div>
+                
+                <div>
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Eva Perón 1610, Altos. Formosa Capital</p>
+                    <p><i class="fas fa-truck"></i> Envíos a todo el país</p>
+                    <p><i class="fas fa-credit-card"></i> Todos los medios de pago</p>
+                </div>
+                
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p><i class="fab fa-whatsapp"></i> +54 370 464-1106</p>
+                    <a href="https://wa.me/543704641106" class="btn" style="margin-top: 1rem; display: inline-block;">Contactar por WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="footer-redes">
+                <a href="#" aria-label="Facebook de Melo Yevo"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram de Melo Yevo"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter de Melo Yevo"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Pinterest de Melo Yevo"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Melo Yevo ♻️ Moda Circular. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Script para smooth scrolling -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
